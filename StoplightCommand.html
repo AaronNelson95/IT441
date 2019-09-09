@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+	<head>
+		<!--Aaron Nelson
+		Last Updated: 9-8-19 -->
+		<title>Stoplight</title>
+		<link rel="stylesheet" href="Styles/Styles.css" type="text/css">
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>Aaron's Class Projects</h1>
+			</header>	
+			<nav><ul>
+				<li><a href="https://AaronNelson95.com">Home</a></li>
+				<li><a href="StoplightCommand.html" class="active">Lab 1 - Stoplight</a></li>
+				<li style="float:right"><a href="https://github.com/AaronNelson95/IT441">GitHub</a></li>
+			</ul></nav>
+			
+			
+			
+			<div id="pageTitle">Lab 1 - Stoplight Control</div>
+			
+		
+			<div id="main">	
+				<p>Choose the color of the stoplight or select "Auto" to have it cycle through. The current status of the stoplight is highlighted blue. </p>
+				
+				<table class=SpotlightColors>
+					<tr>
+						<td id="off" class="running" colspan=3><h4 class="off">OFF</h4></td>
+					</tr>
+					<tr>
+						<!-- Stoplight images from https://www.freemanhealth.com/blog/the-behavior-traffic-light-colors-of-the-light -->
+						<td id="green"><img src="Images/GreenLight.png"><br><h4 class="green">Green</h4></td>
+						<td id="yellow" ><img src="Images/YellowLight.png"><br><h4 class="yellow">Yellow</h4></td>
+						<td id="red"><img src="Images/RedLight.png"><br><h4 class="red">Red</h4></td>
+					</tr>
+					<tr>
+						<td id="auto" colspan=3><h4 class="auto">Auto</h4></td>
+					</tr>
+				</table>
+				
+				
+				
+			
+			</div>
+		
+			<footer>Aaron Nelson &emsp; BYU - Embedded Systems - Lab 1 &emsp; Fall 2019
+			<br>This page was last modified on: 9/8/2019
+			</footer>
+		</div>
+		
+		<script src="Scripts/SpotlightScripts.js"></script>
+	</body>
+</html>

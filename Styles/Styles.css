@@ -1,0 +1,163 @@
+/* CSS Styles for Embedded Systems Projects
+	Aaron Nelson
+	Last Updated: 9-8-19 
+	Note- I originally built the basis of this style design in my COSC 2360 Web Page Dynamics & Scripting class at Western Wyoming Community College during the Spring 2017 Semester.
+*/
+
+
+/* UNIVERSAL STYLES */
+
+html {overflow: -moz-scrollbars-vertical; overflow: scroll;} /* To always show the scroll bar so the widths of the pages can remain consistent across the site */
+
+/* Overall Page Structure */
+body {
+	background-color: #a4b9d5; 
+	color:#000000; 
+	font-family: Verdana, Arial, serif; 
+}
+#wrapper {
+	background-color: #F5F5F5; 
+	width: 90%; 
+	margin-top: 25px;
+	margin-left: auto; 
+	margin-right: auto; 
+	min-width: 600px; 
+	max-width: 1480px; 
+}
+
+
+
+/* Header Appearance (Site Title) */
+header {
+	text-align: left;
+	background-color: #4972aa;
+	height: 100px;
+}
+header h1 {
+	padding-left: 8%;
+	padding-top: 0.6em;
+	color: white;
+	font-size: 2.5em;
+}
+
+
+
+/* Navigation Buttons */
+nav {
+	border-left: 2px solid #4972aa; 
+	border-right: 2px solid #4972aa;
+}
+nav ul {
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	overflow: hidden; 
+	border: 1px solid #e7e7e7; 
+	background-color: #f5f5f5; 
+}
+nav li {
+	float: left; 
+}
+nav li a {
+	display: block; 
+	color: #666; 
+	text-align: center; 
+	padding: 14px 16px; 
+	text-decoration: none; 
+}
+li a:hover:not(.active) {
+	background-color: #ddd; 
+}
+li a.active {
+	color: white; 
+	background-color: #4CAF50; 
+}
+
+
+
+#pageTitle {
+	font-size: 1.8em;
+	font-style: bold;
+	background-color: #4972aa;
+	color: white;
+	padding: 0.3em;
+	text-align: center;
+}
+#main {
+	padding-left: 2em;
+	padding-right: 2em;
+	display: block;
+}
+
+
+
+/* Link Colors */
+a:link {color: #4972aa; }
+a:visited {color: blue; }
+a:hover {color: #4CAF50; }
+h1 a {text-decoration: none; color: white;}
+h1 a:link {color: white; }
+h1 a:visited {color: white; }
+h1 a:hover {color: white; }
+
+
+
+/* Footer Format */
+footer {
+	text-align:center;
+	background-color: #a4b9d5;
+	font-size: .55em;
+	padding: 1em; 
+}
+
+
+
+
+
+/* SPECIFIC WEBPAGE STYELS */
+
+
+
+/* LAB 1 */
+/* Spotlight Table */
+.SpotlightColors {
+	width: 100%; 
+	border: 0; 
+	border-collapse: collapse; 
+	margin-bottom: 3em; 
+}
+.SpotlightColors td, th {
+	border: 0; 
+	padding: 5px; 
+	text-align: center; 
+}
+h4 {
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+/* Spotlight Table Text */
+.green {
+	color: green;
+}
+.yellow {
+	color: yellow;
+	/* Yellow text is not readable so it needs a black outline (using a text-shadow as an outline idea is from https://wpshout.com/quick-guides/create-text-outline-css/ )*/
+	text-shadow:
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+}
+.red {
+	color: red;
+}
+.auto, .off {
+	text-align: center;
+}
+#green:hover, #yellow:hover, #red:hover, #auto:hover, #off:hover {
+	/* Change the color of what is being selected */
+	background-color: #ddd;
+}
+.running {
+	background-color: #a4b9d5;
+}
