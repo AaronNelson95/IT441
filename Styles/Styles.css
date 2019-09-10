@@ -1,6 +1,6 @@
 /* CSS Styles for Embedded Systems Projects
 	Aaron Nelson
-	Last Updated: 9-8-19 
+	Last Updated: 9-10-19 
 	Note- I originally built the basis of this style design in my COSC 2360 Web Page Dynamics & Scripting class at Western Wyoming Community College during the Spring 2017 Semester.
 */
 
@@ -163,4 +163,8 @@ h4 {
 }
 .autoOn {
 	background-color: #a4b9d5;
+}
+.colorPick {
+	width: 50px;
+	text-align: right;
 }

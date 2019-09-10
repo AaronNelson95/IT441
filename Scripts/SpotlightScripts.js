@@ -1,5 +1,8 @@
 /* Lab 1 Spotlight Control Scripts */
 var autoIsOn = 0;
+var GY = 1000;
+var YR = 2000;
+var RG = 3000;
 
 document.getElementById("off").addEventListener("click", offClicked);
 function offClicked(){
@@ -36,7 +39,8 @@ function redClicked(){
 
 document.getElementById("auto").addEventListener("click", autoClicked);
 function autoClicked(){
-	if(autoIsOn == 1){return;};	// For some reason if auto is clicked multiple times while it is already running, the timing gets extremely messed up.
+	if(autoIsOn == 1){alert("Please turn the light off to change the time increments."); return;};	// For some reason if auto is clicked multiple times while it is already running, the timing gets extremely messed up. This stops the button from working again.
+	getTimerValues();
 	let x = document.getElementsByClassName("running");
 	while (x[0]){
 		x[0].classList.remove("running");
@@ -46,17 +50,24 @@ function autoClicked(){
 	runCycle();
 }
 
+function getTimerValues() {
+	GY = parseInt(document.getElementById("GY").value);
+	YR = parseInt(document.getElementById("YR").value) + GY;
+	RG = parseInt(document.getElementById("RG").value) + YR;
+	// alert(GY + " " + YR + " " + RG);
+}
+
 function runCycle(){
 	runGreen();
 	timey = setTimeout(function(){
 		runYellow();
-	}, 1000);	
+	}, GY);	
 	timer = setTimeout(function(){
 		runRed();
-	}, 2000);
+	}, YR);
 	timeg = setTimeout(function(){
 		runCycle();
-	}, 3000);
+	}, RG);
 }
 
 function stopAuto(){

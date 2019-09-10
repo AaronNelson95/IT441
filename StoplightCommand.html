@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<!--Aaron Nelson
-		Last Updated: 9-8-19 -->
+		Last Updated: 9-10-19 -->
 		<title>Stoplight</title>
 		<link rel="stylesheet" href="Styles/Styles.css" type="text/css">
 	</head>
@@ -23,7 +23,7 @@
 			
 		
 			<div id="main">	
-				<p>Choose the color of the stoplight or select "Auto" to have it cycle through. The current status of the stoplight is highlighted blue. </p>
+				<p>Choose the color of the stoplight or select "Auto" to have it cycle through each light. You can set the time increment (in miliseconds) between each change at the bottom of the page. The current status of the stoplight is highlighted blue.  </p>
 				
 				<table class=SpotlightColors>
 					<tr>
@@ -40,13 +40,19 @@
 					</tr>
 				</table>
 				
+				*** To make changes take place, turn the light "OFF" then select "Auto" again ***<br>
+				<input type="number" name="GY" id="GY" class="colorPick" value=1000 /> ms to change from <span class="green">Green</span> -> <span class="yellow">Yellow</span>.
+				<br>
+				<input type="number" name="YR" id="YR" class="colorPick" value=1000 /> ms to change from <span class="yellow">Yellow</span> -> <span class="red">Red</span>.
+				<br>
+				<input type="number" name="RG" id="RG" class="colorPick" value=1000 /> ms to change from <span class="red">Red</span> -> <span class="green">Green</span>.
 				
 				
 			
 			</div>
 		
 			<footer>Aaron Nelson &emsp; BYU - Embedded Systems - Lab 1 &emsp; Fall 2019
-			<br>This page was last modified on: 9/8/2019
+			<br>This page was last modified on: 9/10/2019
 			</footer>
 		</div>
 		
