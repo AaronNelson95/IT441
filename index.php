@@ -17,15 +17,8 @@
 		<div id="wrapper">
 			<header>
 				<h1>Aaron's Class Projects</h1>
-			</header>	
-			<nav><ul>
-				<li><a href="default.html" class="active">Home</a></li>
-				<li><a href="StoplightCommand.html">Lab 1 - Stoplight</a></li>
-				<li style="float:right"><a href="https://github.com/AaronNelson95/IT441">GitHub</a></li>
-			</ul></nav>
-			
-			
-			
+			</header>
+		<?php include 'navbar.php'; ?>
 			<div id="pageTitle">Welcome to my Website</div>
 			
 		
@@ -40,6 +33,10 @@
 			<br><script language="Javascript">document.write("This page was last modified on: "); document.write(writeDateModified())</script>
 			</footer>
 		</div>
+		
+		<script>
+			document.getElementById("homelink").className="active";
+		</script>
 	
 	</body>
 </html>

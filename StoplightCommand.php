@@ -6,19 +6,12 @@
 		<title>Stoplight</title>
 		<link rel="stylesheet" href="Styles/Styles.css" type="text/css">
 	</head>
-	<body>
+	<body onload="offClicked()">
 		<div id="wrapper">
 			<header>
 				<h1>Aaron's Class Projects</h1>
-			</header>	
-			<nav><ul>
-				<li><a href="index.php">Home</a></li>
-				<li><a href="StoplightCommand.html" class="active">Lab 1 - Stoplight</a></li>
-				<li style="float:right"><a href="https://github.com/AaronNelson95/IT441" target="_blank">GitHub</a></li>
-			</ul></nav>
-			
-			
-			
+			</header>
+		<?php include 'navbar.php'; ?>
 			<div id="pageTitle">Lab 1 - Stoplight Control</div>
 			
 		
@@ -46,6 +39,7 @@
 				<input type="number" name="YR" id="YR" class="colorPick" value=1000 /> ms to change from <span class="yellow">Yellow</span> -> <span class="red">Red</span>.
 				<br>
 				<input type="number" name="RG" id="RG" class="colorPick" value=1000 /> ms to change from <span class="red">Red</span> -> <span class="green">Green</span>.
+				<br><br>
 				
 				
 			
@@ -56,8 +50,11 @@
 			</footer>
 		</div>
 		
+		<script>
+			document.getElementById("lab1link").className="active";
+		</script>
+		
 		<script src="Scripts/StoplightScripts.js"></script>
 		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-		<body onload="offClicked()">
 	</body>
 </html>
