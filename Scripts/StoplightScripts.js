@@ -6,10 +6,14 @@ var RG = 3000;
 
 document.getElementById("off").addEventListener("click", offClicked);
 function offClicked(){
-	$(document).ready(function(){
-		var request = new XMLHttpRequest();
-		request.open("GET","Scripts/StoplightOff.php");
-		request.send();
+	$(document).ready(function(){
+
+		var request = new XMLHttpRequest();
+
+		request.open("GET","Scripts/StoplightOff.php");
+
+		request.send();
+
 	});
 
 	/* Help with removing a class from multiple elements is here: https://clubmate.fi/remove-a-class-name-from-multiple-elements-with-pure-javascript/ */
@@ -85,10 +89,14 @@ function stopAuto(){
 }
 
 function runGreen(){
-	$(document).ready(function(){
-		var request = new XMLHttpRequest();
-		request.open("GET","Scripts/StoplightGreen.php");
-		request.send();
+	$(document).ready(function(){
+
+		var request = new XMLHttpRequest();
+
+		request.open("GET","Scripts/StoplightGreen.php");
+
+		request.send();
+
 	});
 
 	let x = document.getElementsByClassName("running");
@@ -99,10 +107,14 @@ function runGreen(){
 }
 
 function runYellow(){
-	$(document).ready(function(){
-		var request = new XMLHttpRequest();
-		request.open("GET","Scripts/StoplightYellow.php");
-		request.send();
+	$(document).ready(function(){
+
+		var request = new XMLHttpRequest();
+
+		request.open("GET","Scripts/StoplightYellow.php");
+
+		request.send();
+
 	});
 
 	let x = document.getElementsByClassName("running");
@@ -113,10 +125,14 @@ function runYellow(){
 }
 
 function runRed(){
-	$(document).ready(function(){
-		var request = new XMLHttpRequest();
-		request.open("GET","Scripts/StoplightRed.php");
-		request.send();
+	$(document).ready(function(){
+
+		var request = new XMLHttpRequest();
+
+		request.open("GET","Scripts/StoplightRed.php");
+
+		request.send();
+
 	});
 
 	let x = document.getElementsByClassName("running");
