@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<!--Aaron Nelson
-		Last Updated: 9-8-19 -->
+		Last Updated: 9-8-19
+		This is a simple home page on my website. It is not needed for the lab -->
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
 		<meta http-equiv="pragma" content="no-cache" />
@@ -18,7 +19,7 @@
 			<header>
 				<h1>Aaron's Class Projects</h1>
 			</header>
-		<?php include 'navbar.php'; ?>
+			<?php include 'navbar.php'; ?>
 			<div id="pageTitle">Welcome to my Website</div>
 			
 		
@@ -30,7 +31,7 @@
 			</div>
 		
 			<footer>Aaron Nelson &emsp; Brigham Young University
-			<br><script language="Javascript">document.write("This page was last modified on: "); document.write(writeDateModified())</script>
+			<br><script language="Javascript">document.write("This page was last modified on: "); document.write(writeDateModified())</script> <!-- A script I had in a prior class that simply just writes the date this file was last changed onto the page. -->
 			</footer>
 		</div>
 		
