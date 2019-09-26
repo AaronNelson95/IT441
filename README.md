@@ -8,3 +8,11 @@ This code in this folder should be placed in the Apache2 web server running on a
 When the user selects a light color on the hosted webpage, JavaScript is used to highlight that cell on the page's table. While this happens on the client's computer, JavaScript also sends an Ajax XMLHttpRequest to the server, to run a php script there. These simple php scripts turns on the associated light's GPIO pin number, and turns off the others by using the terminal system command `$ gpio -g write 2 1` (where '2' is the GPIO pin number, in this case green, and the final '1' means to turn the value on).
 
 The public page for this lab is at http://aaronnelson95.com/IT441Lab1.php
+
+## Lab 2
+### Wifi-Controlled LED Stoplight (Using Arduino)
+This script should be imported into the Arduino IDE and is designed to be uploaded to a WEMOS D1 mini board. Before uploading it, the current wifi SSID and password should be entered in at the top of the script. The pins for the light colors can also be changed, but this assumes the green light is connected to the D6 pin, the yellow light is connected to the D7 pin, the red light is connected to the D8 pin, and the lights ground is connected to the GND pin.
+
+When the board is powered on, it attempts to connect to wifi. If successful, it will host a server and its IP address will be shown on the Arduino IDE's Serial Monitor. Access this IP in a web browser to see a HTML site that will allow a user to select a color the light should change to, or use auto mode, which will cycle through each color.
+
+The public page for this lab is at http://aaronnelson95.com/IT441Lab2.php
