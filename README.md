@@ -9,10 +9,13 @@ When the user selects a light color on the hosted webpage, JavaScript is used to
 
 The public page for this lab is at http://aaronnelson95.com/IT441Lab1.php
 
+
 ## Lab 2
 ### Wifi-Controlled LED Stoplight (Using Arduino)
 This script should be imported into the Arduino IDE and is designed to be uploaded to a WEMOS D1 mini board. Before uploading it, the current wifi SSID and password should be entered in at the top of the script. The pins for the light colors can also be changed, but this assumes the green light is connected to the D6 pin, the yellow light is connected to the D7 pin, the red light is connected to the D8 pin, and the lights ground is connected to the GND pin.
 
 When the board is powered on, it attempts to connect to wifi. If successful, it will host a server and its IP address will be shown on the Arduino IDE's Serial Monitor. Access this IP in a web browser to see a HTML site that will allow a user to select a color the light should change to, or use auto mode, which will cycle through each color.
+
+Arduino shows a web page by using multiple "client.println("");" commands. The PowerShell script located in the Lab 2 folder can easily convert an HTML page to this format. First, edit the .ps1 file to point to your HTML page, then tell it where to output the information. Run it with Windows PowerShell.
 
 The public page for this lab is at http://aaronnelson95.com/IT441Lab2.php

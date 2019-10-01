@@ -366,7 +366,7 @@ void loop() {                       // This constantly cycles through, accepting
 
 
 /* These are the functions that are called when a client sends a request. 
-    They only turn on the light they are supposed to according to the pin number specified at the beggining of the script */
+    They only turn on the light they are supposed to according to the pin number specified at the beginning of the script */
 void lightsOff() {
   digitalWrite(green, LOW);
   digitalWrite(yellow, LOW);
