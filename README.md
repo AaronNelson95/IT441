@@ -16,6 +16,6 @@ This script should be imported into the Arduino IDE and is designed to be upload
 
 When the board is powered on, it attempts to connect to wifi. If successful, it will host a server and its IP address will be shown on the Arduino IDE's Serial Monitor. Access this IP in a web browser to see a HTML site that will allow a user to select a color the light should change to, or use auto mode, which will cycle through each color.
 
-Arduino shows a web page by using multiple "client.println("");" commands. The PowerShell script located in the Lab 2 folder can easily convert an HTML page to this format. First, edit the .ps1 file to point to your HTML page, then tell it where to output the information. Run it with Windows PowerShell.
+Arduino shows a web page by using multiple `client.println("");` commands. The PowerShell script located in the Lab 2 folder can easily convert an HTML page to this format. First, edit the .ps1 file to point to your HTML page, then tell it where to output the information. Run it with Windows PowerShell.
 
 The public page for this lab is at http://aaronnelson95.com/IT441Lab2.php
