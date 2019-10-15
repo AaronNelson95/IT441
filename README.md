@@ -19,3 +19,12 @@ When the board is powered on, it attempts to connect to wifi. If successful, it 
 Arduino shows a web page by using multiple `client.println("");` commands. The PowerShell script located in the Lab 2 folder can easily convert an HTML page to this format. First, edit the .ps1 file to point to your HTML page, then tell it where to output the information. Run it with Windows PowerShell.
 
 The public page for this lab is at http://aaronnelson95.com/IT441Lab2.php
+
+
+## Lab 3
+### Machine to Machine Communication - Vehicle Sensor
+This script should be imported into the Arduino IDE and is designed to be uploaded to two WEMOS D1 mini boards. Before uploading it, the current wifi SSID and password should be entered in at the top of the script. After the sensor server is turned on and connected to wifi, enter its IP address into the stoplight client page and upload the script. The pins for the stoplight client light colors can be changed, but this assumes the green light is connected to the D6 pin, the yellow light is connected to the D7 pin, the red light is connected to the D8 pin, and the lights ground is connected to the GND pin. In addition, this assumes that the Ultrasonic Sensor (HC-SR04) has the Vcc connected to 5V on the board, Trig is connected to pin D7, Echo is connected to pin D6, and Gnd is connected to the boards GND.
+
+When the sensor server is connected to wifi, it will begin to detect distances with the ultrasonic sensor. It will then print this value to the board's server on port 17. While this is continually happening, the stoplight client will read the value provided by the server. Depending on the distance provided, a light will be shown to reflect how far away an object is away from the sensor.
+
+The public page for this lab is at http://aaronnelson95.com/IT441Lab3.php 
