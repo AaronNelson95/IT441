@@ -28,3 +28,11 @@ This script should be imported into the Arduino IDE and is designed to be upload
 When the sensor server is connected to wifi, it will begin to detect distances with the ultrasonic sensor. It will then print this value to the board's server on port 17. While this is continually happening, the stoplight client will read the value provided by the server. Depending on the distance provided, a light will be shown to reflect how far away an object is away from the sensor.
 
 The public page for this lab is at http://aaronnelson95.com/IT441Lab3.php 
+
+
+## Lab 4
+### MQTT Event Hub - Garage Door Sensor
+Coming Soon
+
+
+The public page for this lab is at http://aaronnelson95.com/IT441Lab4.php
