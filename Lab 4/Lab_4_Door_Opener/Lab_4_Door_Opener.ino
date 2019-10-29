@@ -1,5 +1,5 @@
 /*
- * Created 000by Aaron Nelson
+ * Created by Aaron Nelson
  * Lab 4 Event Bus
  * 10-26-19
  * This script is used with the reed switch. It will post to the MQTT server when the magnet becomes connected or disconnected.
@@ -18,7 +18,7 @@ const char* ssid = "YOUR WIFI HERE";       // Specify the name of your wifi
 const char* password = "YOUR PASSWORD HERE";      // Specify the password for your wifi
 
 const char* mqttServer = "192.168.137.1"; // The location of your MQTT Server
-const int mqttPort = 1883;                // The port number your MQTT Server is running on (1883 is the default for Mosquito)
+const int mqttPort = 1883;                // The port number your MQTT Server is running on (1883 is the default for Mosquitto)
 
 WiFiClient doorSwitchClient;        // Name for our MQTT connection client
 PubSubClient client(doorSwitchClient);    // Creates a partially initialized client instance

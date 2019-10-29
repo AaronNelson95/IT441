@@ -20,7 +20,7 @@ const char* ssid = "YOUR WIFI HERE";       // Specify the name of your wifi
 const char* password = "YOUR PASSWORD HERE";      // Specify the password for your wifi
 
 const char* mqttServer = "192.168.137.1"; // The location of your MQTT Server
-const int mqttPort = 1883;                // The port number your MQTT Server is running on (1883 is the default for Mosquito) 
+const int mqttPort = 1883;                // The port number your MQTT Server is running on (1883 is the default for Mosquitto) 
 
 unsigned long beginningMillis;      // A variable to hold our current time (used for auto mode to keep track of how much time has passed)
 int onBlink;                        // Set if the server reading sent 'b'. Will change the red light on and off

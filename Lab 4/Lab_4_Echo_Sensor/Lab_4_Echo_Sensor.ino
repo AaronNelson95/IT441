@@ -23,7 +23,7 @@ const char* ssid = "YOUR WIFI HERE";       // Specify the name of your wifi
 const char* password = "YOUR PASSWORD HERE";      // Specify the password for your wifi
 
 const char* mqttServer = "192.168.137.1"; // The location of your MQTT Server
-const int mqttPort = 1883;                // The port number your MQTT Server is running on (1883 is the default for Mosquito)  
+const int mqttPort = 1883;                // The port number your MQTT Server is running on (1883 is the default for Mosquitto)  
 
 WiFiClient echoClient;              // Name for our MQTT connection client
 PubSubClient client(echoClient);    // Creates a partially initialized client instance
