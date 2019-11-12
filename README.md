@@ -37,3 +37,11 @@ These scripts are meant to be imported into the Arduino IDE and are to be upload
 When turned on, these devices will each attempt to connect to the mosquitto server. The door opener will post a 1 to "garage/doorSwitch" when the magnetic switch becomes connected, and a 0 if it becomes disconnected. The Echo Sensor is subscribed to this channel and listens for a change here. When it notices a 1 come through (meaning the magnetic switch is together), then it begins working and gathering distance values. The range of values here will be used to tell the stoplight which color to turn. If the distance detected is over 35 cm, the light will be green. Between 20-35 will turn the light yellow. 10-20 will be red, and 0-10 will cause the red light to blink. It will post the color state the stoplight should turn to "garage/echoSwitch/color". Finally, the stoplight is subscribed to this channel and will run functions to change color depending on what value passes through.
 
 The public page for this lab is at http://aaronnelson95.com/IT441Lab4.php
+
+## Lab 5
+### Smart Home Controller
+This lab works directly with lab 4. It continues to use the 3 Arduino Devices and a computer MQTT Mosquitto server. This lab now works with integrating those devices into an IoT Controller, Home Assistant. This lab walks through setting up Hassbian on a Raspberry Pi device and installing Home Assistant. From there, integrations are added through the configuration.yaml file and sensors are made to watch MQTT topics. Templates are made for better readability of those topic values, and their data is turned into cards on Home Assistant's main screen. Finally, automations are set up to run events with IFTTT when certain triggers occur.
+
+This lab's folder contains example configuration files to set up home assistant with the MQTT server. After Hassbian is installed on the Raspberry Pi, the folder path here in GitHub represents the path the files should be saved at.
+
+The public page for this lab is at http://aaronnelson95.com/IT441Lab5.php

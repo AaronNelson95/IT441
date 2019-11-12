@@ -1,0 +1,86 @@
+{
+    "data": {
+        "config": {
+            "title": "Provo Condo",
+            "views": [
+                {
+                    "badges": [
+                        {
+                            "entity": "person.aaron_nelson"
+                        },
+                        {
+                            "entity": "sun.sun"
+                        },
+                        {
+                            "entity": "sensor.door_switch_mqtt"
+                        },
+                        {
+                            "entity": "sensor.echo_sensor_color_mqtt"
+                        }
+                    ],
+                    "cards": [
+                        {
+                            "entity": "sensor.door_switch",
+                            "name": "Garage Door Status",
+                            "type": "sensor"
+                        },
+                        {
+                            "entity": "sensor.stoplight_color",
+                            "name": "Stoplight Status",
+                            "type": "sensor"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.door_switch"
+                                }
+                            ],
+                            "hours_to_show": 1,
+                            "refresh_interval": 0,
+                            "title": "Garage Door History",
+                            "type": "history-graph"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.stoplight_color"
+                                }
+                            ],
+                            "hours_to_show": 1,
+                            "refresh_interval": 0,
+                            "title": "Stoplight History",
+                            "type": "history-graph"
+                        },
+                        {
+                            "entity": "switch.command_door",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "name": "Garage Door Override",
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "theme": "default",
+                            "type": "entity-button"
+                        },
+                        {
+                            "entity": "weather.provo_condo",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entity": "sensor.car_in_garage",
+                            "name": "Is the Car in the Garage?",
+                            "type": "sensor"
+                        }
+                    ],
+                    "path": "default_view",
+                    "title": "Home"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}
