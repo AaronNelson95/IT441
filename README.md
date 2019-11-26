@@ -54,4 +54,4 @@ This lab works directly with lab 4 and 5. It continues to use the 3 Arduino Devi
 
 The Relay Shield can be directly connected to the top of a Wemos board. If it cannot, the pins that must be connected and matched are: 5V, GND, and D1 (which triggers the relay when set to high). This code and additional adjustments to Home Assistant's configuration is added to this lab's folder.
 
-The public page for this lab is at http://aaronnelson95.com/IT551Lab6.php
+The public page for this lab is at http://aaronnelson95.com/IT441Lab6.php
