@@ -38,6 +38,7 @@ When turned on, these devices will each attempt to connect to the mosquitto serv
 
 The public page for this lab is at http://aaronnelson95.com/IT441Lab4.php
 
+
 ## Lab 5
 ### Smart Home Controller
 This lab works directly with lab 4. It continues to use the 3 Arduino Devices and a computer MQTT Mosquitto server. This lab now works with integrating those devices into an IoT Controller, Home Assistant. This lab walks through setting up Hassbian on a Raspberry Pi device and installing Home Assistant. From there, integrations are added through the configuration.yaml file and sensors are made to watch MQTT topics. Templates are made for better readability of those topic values, and their data is turned into cards on Home Assistant's main screen. Finally, automations are set up to run events with IFTTT when certain triggers occur.
@@ -45,3 +46,12 @@ This lab works directly with lab 4. It continues to use the 3 Arduino Devices an
 This lab's folder contains example configuration files to set up home assistant with the MQTT server. After Hassbian is installed on the Raspberry Pi, the folder path here in GitHub represents the path the files should be saved at.
 
 The public page for this lab is at http://aaronnelson95.com/IT441Lab5.php
+
+
+## Lab 6
+### User Interface - Garage Door
+This lab works directly with lab 4 and 5. It continues to use the 3 Arduino Devices and a local computer MQTT Mosquitto server to share and display information. This information is shown in Home Assistant (setup in lab 5). This project assumes that both of the prior labs have been completed and work properly. Here, a fourth, and final, device is added- a Wemos Relay Shield. This is meant to trigger a physical garage door button (wiring is not discussed here but can be found online). This device listens to an Adafruit.io feed, which can be triggered with IFTTT. When a value (of "1" in this case) comes through, the relay triggers and pulses for one second. A light and audible click sound will alert the user that this was done correctly (or the actual opening of the garage when connected). This posts that it was triggered into Home Assistant, where it can be setup as a sensor.
+
+The Relay Shield can be directly connected to the top of a Wemos board. If it cannot, the pins that must be connected and matched are: 5V, GND, and D1 (which triggers the relay when set to high). This code and additional adjustments to Home Assistant's configuration is added to this lab's folder.
+
+The public page for this lab is at http://aaronnelson95.com/IT551Lab6.php
