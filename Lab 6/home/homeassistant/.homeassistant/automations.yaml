@@ -1,0 +1,45 @@
+- id: '1573538073059'
+  alias: Garage Left Open Email
+  description: Send an email to myself after the garage door was left open
+  trigger:
+    # Happens 1 minute after the door_switch value changes to "Opened"
+  - entity_id: sensor.door_switch
+    for: 00:01:00
+    from: Closed
+    platform: state
+    to: Opened
+  condition: []
+  action:
+    # Sends a simple IFTTT trigger with an event name
+  - data:
+      event: GarageLeftOpen
+    service: ifttt.trigger
+- id: '1573540765244'
+  alias: Car Just Arrived Home
+  description: Send a notification and record a log entry when I arrive home with the car
+  trigger:
+    # Happens when the car just arrives at home in the car_in_garage state
+  - entity_id: sensor.car_in_garage
+    platform: state
+    to: The Car is Currently at Home
+  condition: []
+  action:
+    # Sends an IFTTT trigger that also contains the value the stoplight sensor was set to
+  - data_template: {"event":"CarArrived", "value1":"{{ states.sensor.stoplight_color.state }}"}
+    service: ifttt.trigger
+- id: '1574312280000'
+  alias: Garage Door Button Was Pushed
+  description: Add time of occurrence to IFTTT spreadsheet
+  trigger:
+    # Happens when the relay button is triggered
+  - entity_id: sensor.garage_button_trigger
+    from: Triggered
+    platform: state
+    to: Waiting
+  condition: []
+  action:
+    # Sends an IFTTT trigger that will log the time this occurs into a Google Sheet (Activated with the event "ButtonRelay")
+  - alias: ''
+    data:
+      event: ButtonRelay
+    service: ifttt.trigger
