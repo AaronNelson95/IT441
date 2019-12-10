@@ -193,7 +193,7 @@ void MQTT_connect() {
        Serial.println("Retrying Adafruit connection in 5 seconds...");
        mqtt.disconnect();
        delay(5000);  // wait 5 seconds
-       retries--;    // Count against one of the retires becuase there was no success
+       retries--;    // Count against one of the retries because there was no success
        if (retries == 0) {
          // basically die and wait for the board to be reset
          while (1);

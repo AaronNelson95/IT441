@@ -13,7 +13,7 @@
  * 
  * The JSON reader was obtained from https://arduinojson.org/v6/example/http-client/ and Size and parameters were generated from https://arduinojson.org/v6/assistant/
  * 
- * The LED screen portion was obtinained from the Arduino example (after adding the Adafruit GFX and Adafruit SSD1306 Wemos Mini OLED libraries) at File -> Examples -> Adafruit SSD1306 Wemos Mini OLED -> ssd1306_64x48_i2c
+ * The LED screen portion was obtained from the Arduino example (after adding the Adafruit GFX and Adafruit SSD1306 Wemos Mini OLED libraries) at File -> Examples -> Adafruit SSD1306 Wemos Mini OLED -> ssd1306_64x48_i2c
  *
     OLED Shield pins (if soldering does not allow direct placement):
         3V3: 3V3
@@ -27,7 +27,7 @@
 #include <ArduinoJson.h>            // Library to read and process JSON objects
 #include <Wire.h>                   // Used to communicate with I2C devices
 #include <Adafruit_GFX.h>           // The Adafruit graphics core library to work with OLED displays
-#include <Adafruit_SSD1306.h>       // Libary that works with the OLED Shield displays
+#include <Adafruit_SSD1306.h>       // Library that works with the OLED Shield displays
 #include "Adafruit_MQTT.h"          // Library to access data from an Adafruit.io online feed
 #include "Adafruit_MQTT_Client.h"   // Used to subscribe to an Adafruit.io online feed
 
@@ -62,14 +62,14 @@ Adafruit_MQTT_Subscribe alarm = Adafruit_MQTT_Subscribe(&mqtt, AIO_USERNAME "/fe
 
 /********************** Weather JSON Variables ******************************/
 String weatherInformation = "";     // Variable to hold API JSON data
-String temperature = "";            // Varaible to hold the obtained temperature
+String temperature = "";            // Variable to hold the obtained temperature
 String tempMin = "";                // Variable to hold the obtained min temperature 
 String tempMax = "";                // Variable to hold the obtained max temperature
 String conditions = "";             // Variable to hold weather condition information
 
 
 /********************** OLED display settings *******************************/
-// This defines important variables for the OLED screen to work. If using a differnet screen size, obtain this information from the corresponding examples
+// This defines important variables for the OLED screen to work. If using a different screen size, obtain this information from the corresponding examples
 #define OLED_RESET -1  // GPIO0
 Adafruit_SSD1306 display(OLED_RESET);
 #define XPOS 0
@@ -90,7 +90,7 @@ void setup() {
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize the OLED display with the I2C addr 0x3C (for the 64x48)
   // init done
 
-  // Show image buffer on the display hardware. Since the buffer is intialized with an Adafruit splashscreen internally, this will display the splashscreen.
+  // Show image buffer on the display hardware. Since the buffer is initialized with an Adafruit splashscreen internally, this will display the splashscreen.
   // display.display();
   
   // Clear the buffer.
@@ -201,7 +201,7 @@ void MQTT_connect() {
        Serial.println("Retrying Adafruit connection in 5 seconds...");
        mqtt.disconnect();
        delay(5000);  // wait 5 seconds
-       retries--;    // Count against one of the retires becuase there was no success
+       retries--;    // Count against one of the retries because there was no success
        if (retries == 0) {
          // basically die and wait for the board to be reset after showing an error message on the display screen
          display.clearDisplay();        // Clear the previous contents of the screen
