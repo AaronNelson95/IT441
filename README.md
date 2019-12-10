@@ -55,3 +55,12 @@ This lab works directly with lab 4 and 5. It continues to use the 3 Arduino Devi
 The Relay Shield can be directly connected to the top of a Wemos board. If it cannot, the pins that must be connected and matched are: 5V, GND, and D1 (which triggers the relay when set to high). This code and additional adjustments to Home Assistant's configuration is added to this lab's folder.
 
 The public page for this lab is at http://aaronnelson95.com/IT441Lab6.php
+
+
+## Final Project
+### Arduino Alarm
+This is my final project for the class. It is designed to work as an alarm to wake up to in the morning. The alarm is handled with IFTTT and Adafruit.IO. When a time passes in IFTTT, then a value of "1" is pushed to the Alarm feed. Three devices will listen to this feed. When the alarm goes off, one device will light up a WS2812B LED light strip. Another device will make a HTTP Get request to a weather API, then parse through its JSON, and display the temperature and weather data for the day on a OLED Shield. A final device is a reed switch, acting as a door sensor. Only when the alarm is on, this switch will check for when you open your door (assuming you sleep with the door closed). When it opens, it publishes a value of "0" to the feed to turn off the alarm. The alarm can also be set to turn off with Google Assistant, a push button, and other options provided through IFTTT. In addition, sending a MQTT value of "Lights" will provide a demo of the light strip by turning LEDs on and off one after another. Sending a value of "Weather" will fetch and display the current weather on the OLED display for 10 seconds.
+
+The OLED Shield (screen size of 64x48px) can be directly connected to the top of a Wemos board. If it cannot, the pins that must be connected and matched are: 3V, GND, D1 (SCL), and D2 (SDA). The LED light strip (WS2812B) should have three wires- one connected to 5V, one to GND, and one to D6 (or any specified pin). Check your instructions on what wire goes to which pin. The Magnetic reed switch has one wire connected to the D6 pin and the other wire connected to the GND pin.
+
+The public page for this lab is at http://aaronnelson95.com/IT441Final.php
